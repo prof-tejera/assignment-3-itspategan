@@ -1,4 +1,4 @@
-import { React, useState, useEffect, useContext } from "react";
+import { React, useEffect, useContext } from "react";
 import styled from "styled-components";
 import DisplayTime from "../generic/DisplayTime";
 // import Input from "../generic/Input";
@@ -18,11 +18,6 @@ const Container = styled.div`
 `;
 
 const Stopwatch = (props) => {
-  // const [isActive, setIsActive] = useState(false);
-  // const [isPaused, setIsPaused] = useState(true);
-  // const [time, setTime] = useState(0);
-  // const [stopTime, setStopTime] = useState(10000);
-
   const {
     isActive,
     setIsActive,
@@ -31,7 +26,7 @@ const Stopwatch = (props) => {
     time,
     setTime,
     stopTime,
-    setStopTime,
+    // setStopTime,
   } = useContext(TimerContext);
 
   useEffect(() => {
@@ -47,7 +42,7 @@ const Stopwatch = (props) => {
     return () => {
       clearInterval(interval);
     };
-  }, [isActive, isPaused, stopTime, time]);
+  }, [isActive, isPaused, stopTime, time, setTime]);
 
   const handleStart = () => {
     setIsActive(true);

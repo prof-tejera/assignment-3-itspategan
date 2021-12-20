@@ -5,7 +5,7 @@ import styled from "styled-components";
 import DocumentationView from "./views/DocumentationView";
 import TimersView from "./views/TimersView";
 import TimerProvider from "./Context/TimerProvider";
-import AddTimersView from "./views/AddTimersView";
+// import AddTimersView from "./views/AddTimersView";
 
 const Container = styled.div`
   background: #f0f6fb;
